@@ -22,7 +22,7 @@ export function Contact() {
     { Icon: MapPin, label: "Location", value: contact.location },
   ];
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -40,12 +40,36 @@ export function Contact() {
       return;
     }
 
+    if (!contact.web3formsKey) {
+      toast.error("The form isn't connected yet.", { description: `Please email ${contact.email} directly.` });
+      return;
+    }
+
     setSending(true);
-    const body = `${message}\n\n— ${name} (${email})`;
-    window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    toast.success("Opening your email app…", { description: "Your message is ready to send." });
-    form.reset();
-    setTimeout(() => setSending(false), 1200);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: contact.web3formsKey,
+          subject: `Portfolio: ${subject}`,
+          from_name: name,
+          name,
+          email,
+          replyto: email,
+          message,
+          botcheck: String(data.get("botcheck") ?? ""),
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || "Failed");
+      toast.success("Message sent!", { description: "Emmanuel will get back to you soon." });
+      form.reset();
+    } catch {
+      toast.error("Couldn't send your message.", { description: "Please check your connection and try again." });
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -115,6 +139,7 @@ export function Contact() {
               className="glass rounded-[2rem] p-6 shadow-card sm:p-10"
               aria-label="Contact form"
             >
+              <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
@@ -141,7 +166,7 @@ export function Contact() {
                 </div>
               </div>
               <Button type="submit" variant="hero" size="xl" className="mt-8 w-full sm:w-auto" disabled={sending}>
-                <Send /> {sending ? "Opening…" : "Send Message"}
+                <Send /> {sending ? "Sending…" : "Send Message"}
               </Button>
             </form>
           </Reveal>

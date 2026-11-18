@@ -22,7 +22,9 @@ export const profile = {
 };
 
 export const contact = {
-  email: "emmanuel@example.com", // TODO
+  email: "emmanebe097@gmail.com",
+  // Free public key from web3forms.com (created for emmanebe097@gmail.com). Safe to keep here.
+  web3formsKey: "", // TODO: paste key
   phone: "+91 00000 00000", // TODO
   linkedin: "https://www.linkedin.com/in/your-profile", // TODO
   linkedinLabel: "linkedin.com/in/your-profile",
