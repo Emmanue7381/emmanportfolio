@@ -28,8 +28,8 @@ export const contact = {
   phone: "+91 74485 55546",
   linkedin: "https://www.linkedin.com/in/your-profile", // TODO
   linkedinLabel: "linkedin.com/in/your-profile",
-  github: "https://github.com/your-username", // TODO
-  githubLabel: "github.com/your-username",
+  github: "https://github.com/Emmanue7381",
+  githubLabel: "github.com/Emmanue7381",
   location: "Chennai, India", // TODO: confirm
 };
 
