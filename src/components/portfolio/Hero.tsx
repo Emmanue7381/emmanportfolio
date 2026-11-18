@@ -79,7 +79,7 @@ export function Hero() {
         <div className="relative lg:col-span-4">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-t-[999px] bg-gradient-panel lg:absolute lg:inset-y-0 lg:aspect-auto lg:max-w-none lg:rounded-none">
             <div className="absolute inset-0 flex flex-col items-center justify-end pb-[18%]">
-              <div className="relative grid aspect-square w-[62%] place-items-center overflow-hidden rounded-full bg-background shadow-card">
+              <div className="relative grid aspect-square w-[78%] max-w-xs place-items-center overflow-hidden rounded-full bg-background shadow-card">
                 {profile.photoUrl ? (
                   <img
                     src={profile.photoUrl}

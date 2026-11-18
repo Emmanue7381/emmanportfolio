@@ -2,9 +2,9 @@
  * All editable portfolio content lives here.
  * Replace placeholder values (marked "TODO") with real details when available.
  */
-import portraitAsset from "@/assets/emmanuel-portrait.jpg.asset.json";
-import pattaImage from "@/assets/project-patta-ml.jpg";
-import responsiveImage from "@/assets/project-responsive-web.jpg";
+import portraitAsset from "@/assets/emmy photo.jpeg";
+import pattaImage from "@/assets/patta.png";
+import responsiveImage from "@/assets/rural healthcare.png";
 
 export const profile = {
   firstName: "Emmanuel",
@@ -15,7 +15,7 @@ export const profile = {
     "I'm a Computer Science Engineering student passionate about building modern web applications and exploring the possibilities of Artificial Intelligence and Machine Learning. I enjoy turning ideas into practical digital solutions through development, creativity, and continuous learning.",
   rotatingFocus: ["Full-Stack Development", "AI & Machine Learning", "Generative AI"],
   /** Profile photo shown in the hero panel. Empty shows the monogram. */
-  photoUrl: portraitAsset.url,
+  photoUrl: portraitAsset,
   /** TODO: set to a hosted PDF URL to enable the resume download. */
   resumeUrl: "",
   tagline: "Building for the web today, engineering with AI tomorrow.",
@@ -26,8 +26,8 @@ export const contact = {
   // Free public key from web3forms.com (created for emmanebe097@gmail.com). Safe to keep here.
   web3formsKey: "e89cb328-df76-4ed4-93ea-eb1c0d809b7e",
   phone: "+91 74485 55546",
-  linkedin: "https://www.linkedin.com/in/your-profile", // TODO
-  linkedinLabel: "linkedin.com/in/your-profile",
+  linkedin: "https://www.linkedin.com/in/emmanuel-ebenezer-02511a331/",
+  linkedinLabel: "linkedin.com/in/emmanuel-ebenezer-02511a331",
   github: "https://github.com/Emmanue7381",
   githubLabel: "github.com/Emmanue7381",
   location: "Chennai, India", // TODO: confirm
@@ -110,11 +110,11 @@ export const projects = [
     githubUrl: "", // TODO
   },
   {
-    title: "Responsive Website Development",
-    category: "Web Development",
+    title: "Rural Healthcare System",
+    category: "Healthcare Technology",
     description:
-      "Designed and developed multiple responsive websites with layouts optimized for desktop, tablet, and mobile devices.",
-    tech: ["Responsive Design"], // TODO: add exact technologies
+      "A rural healthcare platform for monitoring clinic queues, patient tokens, and health centre activity.",
+    tech: ["Healthcare System"],
     image: responsiveImage,
     liveUrl: "", // TODO
     githubUrl: "", // TODO
