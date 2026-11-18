@@ -25,7 +25,7 @@ export const contact = {
   email: "emmanebe097@gmail.com",
   // Free public key from web3forms.com (created for emmanebe097@gmail.com). Safe to keep here.
   web3formsKey: "e89cb328-df76-4ed4-93ea-eb1c0d809b7e",
-  phone: "+91 00000 00000", // TODO
+  phone: "+91 74485 55546",
   linkedin: "https://www.linkedin.com/in/your-profile", // TODO
   linkedinLabel: "linkedin.com/in/your-profile",
   github: "https://github.com/your-username", // TODO
