@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All portfolio copy, links and placeholders live in `src/content/portfolio.ts`; section components only render it, so content edits never touch layout code.
+- The portfolio is one scrolling page at `/` with in-page section anchors, because the brief asks for smooth-scroll navigation between sections.
+- Colors, gradients and shadows are tokens/utilities in `src/styles.css`; components never use raw color classes.
