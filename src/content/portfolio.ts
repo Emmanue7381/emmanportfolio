@@ -16,8 +16,7 @@ export const profile = {
   rotatingFocus: ["Full-Stack Development", "AI & Machine Learning", "Generative AI"],
   /** Profile photo shown in the hero panel. Empty shows the monogram. */
   photoUrl: portraitAsset,
-  /** TODO: set to a hosted PDF URL to enable the resume download. */
-  resumeUrl: "",
+  resumeUrl: "/2026%20RESUME%20EMMAN.pdf",
   tagline: "Building for the web today, engineering with AI tomorrow.",
 };
 
