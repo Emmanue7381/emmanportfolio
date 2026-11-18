@@ -78,23 +78,23 @@ export function Hero() {
         {/* Middle: lavender panel with portrait */}
         <div className="relative lg:col-span-4">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-t-[999px] bg-gradient-panel lg:absolute lg:inset-y-0 lg:aspect-auto lg:max-w-none lg:rounded-none">
-            {profile.photoUrl ? (
-              <img
-                src={profile.photoUrl}
-                alt={`${profile.firstName} ${profile.lastName}`}
-                className="absolute inset-0 h-full w-full object-cover object-top grayscale"
-              />
-            ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-end pb-[18%]">
-                <div className="relative grid aspect-square w-[62%] place-items-center rounded-full bg-background shadow-card">
+            <div className="absolute inset-0 flex flex-col items-center justify-end pb-[18%]">
+              <div className="relative grid aspect-square w-[62%] place-items-center overflow-hidden rounded-full bg-background shadow-card">
+                {profile.photoUrl ? (
+                  <img
+                    src={profile.photoUrl}
+                    alt={`${profile.firstName} ${profile.lastName}`}
+                    className="absolute inset-0 h-full w-full object-cover object-top grayscale"
+                  />
+                ) : (
                   <span className="font-display text-[clamp(4rem,9vw,7rem)] leading-none text-lavender-soft">
                     EE
                   </span>
-                  <span className="absolute inset-3 rounded-full border border-lavender/40" />
-                </div>
-                <p className="mt-8 font-display text-2xl text-primary-foreground">Code · Data · Design</p>
+                )}
+                <span className="absolute inset-3 rounded-full border border-lavender/40" />
               </div>
-            )}
+              <p className="mt-8 font-display text-2xl text-primary-foreground">Code · Data · Design</p>
+            </div>
           </div>
         </div>
 
