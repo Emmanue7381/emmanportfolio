@@ -2,6 +2,7 @@
  * All editable portfolio content lives here.
  * Replace placeholder values (marked "TODO") with real details when available.
  */
+import portraitAsset from "@/assets/emmanuel-portrait.jpg.asset.json";
 import pattaImage from "@/assets/project-patta-ml.jpg";
 import responsiveImage from "@/assets/project-responsive-web.jpg";
 
@@ -13,8 +14,8 @@ export const profile = {
   intro:
     "I'm a Computer Science Engineering student passionate about building modern web applications and exploring the possibilities of Artificial Intelligence and Machine Learning. I enjoy turning ideas into practical digital solutions through development, creativity, and continuous learning.",
   rotatingFocus: ["Full-Stack Development", "AI & Machine Learning", "Generative AI"],
-  /** TODO: set to an image URL to show a real profile photo. Empty shows the monogram. */
-  photoUrl: "",
+  /** Profile photo shown in the hero panel. Empty shows the monogram. */
+  photoUrl: portraitAsset.url,
   /** TODO: set to a hosted PDF URL to enable the resume download. */
   resumeUrl: "",
   tagline: "Building for the web today, engineering with AI tomorrow.",
